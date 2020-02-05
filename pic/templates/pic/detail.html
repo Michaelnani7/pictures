@@ -1,0 +1,36 @@
+{% extends 'bas.html' %}
+{% block content %}
+<div class="row">
+    <div class="col-2">
+        <img src="{{model.icon.url}}" class="img-fluid"/>
+    </div>
+    <div class="col-10">
+        <a href="#"><h1>{{model.Name}}</h1></a>
+    </div>
+</div>
+<div class="row">
+    <div class="col-8 pt-3">
+        <img src="{{model.image.url}}" class="img-fluid"/>
+    </div>
+    <div class="col-4">
+        <a href="javascript:{document.getElementById('upvote').submit()}">
+            <button class="btn btn-primary btn-block">Likes {{ model.votes_total }}</button>
+        </a>
+    </div>
+</div>
+<div class="row">
+    <div class="col-4 pt-1 text-left">
+        <h4>{{model.pub_date_pretty}}</h4>
+    </div>
+
+    <div class="row">
+        <div class="col-8 pt-1">
+            <h4>{{model.body}}</h4>
+        </div>
+        <form id="upvote" method="POST" action="{% url 'upvote' model.id %}">
+
+            {% csrf_token %}
+            <input type="hidden">
+        </form>
+
+        {% endblock %}

@@ -1,0 +1,23 @@
+{% extends 'bas.html' %}
+{% block content %}
+{% for model in models %}
+<div class="row pt-2 ">
+    <div class="col-2" onclick="window.location='{% url 'detail' model.id %}';" style="cursor: pointer;">
+        <img src="{{model.icon.url}}" class="img-fluid" />
+    </div>
+     <div class="col-6"onclick="window.location='{% url 'detail' model.id %}';" style="cursor: pointer;">
+         <h1>{{model.Name}}</h1>
+         <p>{{model.summary}}</p>
+    </div>
+    <div class="col-4">
+ <a href="javascript:{document.getElementById('upvote{{ model.id }}').submit()}"><button class="btn btn-primary btn-block">Likes {{ model.votes_total }}</button></a>
+    </div>
+</div>
+
+                <form id="upvote{{ model.id }}" method="POST" action="{% url 'upvote' model.id %}">
+
+                                {% csrf_token %}
+                          <input type="hidden">
+                            </form>
+{% endfor %}
+{% endblock %}

@@ -1,0 +1,219 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="slider_area">
+    <div class="slider_active owl-carousel">
+        <div class="single_slider  d-flex align-items-center slider_bg_1 black_overlay">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-xl-12 col-md-12">
+                        <div class="slider_text text-center ">
+                            <h3 class="wow fadeInDown" data-wow-duration="3s" data-wow-delay=".7s">Hi, This is Adeolu
+                                Onanuga, a professional photographer <br>
+                                I captured moments</h3>
+                            <div class="video_service_btn wow fadeInDown" data-wow-duration="7s" data-wow-delay=".7s">
+                                <a href="#" class="boxed-btn3">Email Me</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="single_slider  d-flex align-items-center slider_bg_1 black_overlay">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-xl-12 col-md-12">
+                        <div class="slider_text text-center ">
+                            <h3 class="wow fadeInDown" data-wow-duration="4s" data-wow-delay=".4s">Photograghy is
+                                LIFE<br>
+                                Welcome onboard guys !!!</h3>
+                            <div class="video_service_btn wow fadeInDown" data-wow-duration="4s" data-wow-delay=".4s">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- slider_area_end -->
+
+<!-- photography_skill_area  -->
+<div class="photography_skill_area">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-9 col-md-9">
+                <div class="section_title text-center">
+                    <h3>Supreme Skills through Shakes the creator</h3>
+                    <p>Are you thinking of Developing yourself in Photography, Cinematography,<br/>
+                    and Graphic designs, we are here to develop you to the best you can ever imagine,
+                    you can contact us through our media icons or  our customer call center
+                    (+234-7068219537)</p>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-9">   <img src="{% static 'stcc.jpg' %}" height="150" width="200" alt=""></div>
+
+        </div>
+    </div>
+</div>
+<!-- /photography_skill_area  -->
+
+<!-- wild_photography  -->
+<div class="wild_photography">
+    <div class="container">
+        <div class="row no-gutters align-items-center ">
+            <div class="col-lg-6">
+                <div class="wildlife_photo">
+                    <img src="{% static 'img/photography/zebra.png' %}" alt="">
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="section_title">
+                    <h3>Wildlife photography</h3>
+                    <p>We also capture Wildlife photography <br> All you just need to do is to contact us below </p>
+                    <a href="#"  class="black_btn">Explore Work</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /wild_photography  -->
+
+<!-- gallery_area  -->
+<div class="gallery_area">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-7 col-lg-7">
+                <div class="section_title text-center mb-50">
+                    <h3>Welcome Models</h3>
+                    <p>Hey guys welcome to my Website !!! if you are a normal user or model ,
+                        I got great deals for you on this website once you sign up as a user you entitle to add your
+                        picture and name to get likes from friends around the world....SHAKES THE CREATOR.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row no-gutters ">
+            {% for dam in dams %}
+            <div class="col-xl-4 col-md-4">
+                <div class="single_photography">
+                    <div class="thumb">
+                        <a href="{% url 'create' %}"><img src="{{ dam.image.url }}" alt=""></a>
+                    </div>
+                        <div class="hover_inner">
+                            <span>{{ dam.name }}</span>
+                        </div>
+                    </a>
+                    <div>      <p>{{ dam.desc }}</p> </div>
+                </div>
+            </div>
+            {% endfor %}
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- /gallery_area  -->
+
+<!-- testimonial_area  -->
+<div class="testimonial_area">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-10">
+                <div class="testimonial_active owl-carousel">
+                    <div class="single_testmonial text-center">
+                        <h3>Our Customers Say</h3>
+                        <p>
+                            Whether you’re about to create a website for the first time, or you’re looking
+                            for a theme that provides advanced capabilities, we have got them in
+                            Blacksilver theme.
+                        </p>
+                        <div class="author_name d-flex align-items-center justify-content-center">
+                            <div class="thumb">
+                                <img src="{% static 'img/testmonial/author.png' %}" alt="">
+                            </div>
+                            <span>- Robert Thomson</span>
+                        </div>
+                    </div>
+                    <div class="single_testmonial text-center">
+                        <h3>Our Customers Say</h3>
+                        <p>
+                            Whether you’re about to create a website for the first time, or you’re looking
+                            for a theme that provides advanced capabilities, we have got them in
+                            Blacksilver theme.
+                        </p>
+                        <div class="author_name d-flex align-items-center justify-content-center">
+                            <div class="thumb">
+                                <img src="{% static 'img/testmonial/author.png' %}" alt="">
+                            </div>
+                            <span>- Robert Thomson</span>
+                        </div>
+                    </div>
+                    <div class="single_testmonial text-center">
+                        <h3>Our Customers Say</h3>
+                        <p>
+                            Whether you’re about to create a website for the first time, or you’re looking
+                            for a theme that provides advanced capabilities, we have got them in
+                            Blacksilver theme.
+                        </p>
+                        <div class="author_name d-flex align-items-center justify-content-center">
+                            <div class="thumb">
+                                <img src="{% static 'img/testmonial/author.png' %}" alt="">
+                            </div>
+                            <span>- Robert Thomson</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /testimonial_area  -->
+
+<!-- team_area  -->
+<div class="team_area">
+    <div class="container">
+        <div class="border_bottom">
+            <div class="row">
+                {% for dest in dests %}
+                <div class="col-xl-4 col-lg-4 col-md-6">
+                    <div class="single_team">
+                        <div class="team_thumb">
+                            <img src="{{ dest.picture.url }}" alt="">
+                        </div>
+                        <div class="team_info text-center">
+                            <h3>{{ dest.name }}</h3>
+                            <p>Photographer</p>
+                            <p>{{ dest.contact }}</p>
+                            <div class="social_link">
+                                <ul>
+                                    <li><a href="#">
+                                        <i class="fa fa-facebook"></i>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <i class="fa fa-twitter"></i>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <i class="fa fa-instagram"></i>
+                                    </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<!-- /team_area  -->
+
+
+<!-- instragram_area  -->
+
+{% endblock %}
