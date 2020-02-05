@@ -43,6 +43,7 @@
                             <nav>
                                 <ul id="navigation">
                                     {% if user.is_authenticated %}
+                                    <li><a href="#"> Hello, {{user.username}}</a></li>
                                     <li><a href="{% url 'create' %}">Model Info</a></li>
                                     <li><a href="{% url 'modeldetail' %}">Model Details</a></li>
                                     <li><a href="javascript:{document.getElementById('logout').submit()}">Logout</a></li>
@@ -84,7 +85,7 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-xl-7 col-md-8">
-                        <p>Thanks for Visiting Guys Happy !! {% now "Y"%}</p>
+                        <p>Copyright Nani {% now "Y"%}</p>
                 </div>
                 </div>
 
