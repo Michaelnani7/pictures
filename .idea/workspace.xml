@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="22e58e1a-7c88-4aae-9615-c32817e1c441" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/account/templates/account/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/account/templates/account/signup.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pictures/templates/bas.html" beforeDir="false" afterPath="$PROJECT_DIR$/pictures/templates/bas.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pictures/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/pictures/templates/base.html" afterDir="false" />
-    </list>
+    <list default="true" id="22e58e1a-7c88-4aae-9615-c32817e1c441" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
