@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from .models import Photograher, Main, Model
+from .models import Photograher, Main, Model, Album
 from django.utils import timezone
 from django.contrib.auth.decorators import login_required
 
@@ -58,3 +58,8 @@ def upvote(request, model_id):
 def modeldetail(request):
     models = Model.objects.all()
     return render(request,'pic/modeldetail.html', {'models':models})
+
+
+def album(request):
+    album = Album.objects.all()
+    return render(request,'pic/album.html', {'album':album})
