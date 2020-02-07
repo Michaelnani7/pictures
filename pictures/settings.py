@@ -80,11 +80,9 @@ WSGI_APPLICATION = 'pictures.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'picturedb',
+        'NAME': 'postgres',
         'USER': 'picture',
         'PASSWORD': 'django1234',
-        'HOST': 'localhost',
-        'PORT': '5432',
     }
 }
 
