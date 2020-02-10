@@ -10,6 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- <link rel="manifest" href="site.webmanifest"> -->
+    <link href="{% static 'open-iconic/font/css/open-iconic-bootstrap.css' %}" rel="stylesheet" >
     <!-- Place favicon.ico in the root directory -->
 
     <!-- CSS here -->
@@ -44,16 +45,16 @@
                                 <ul id="navigation">
                                     {% if user.is_authenticated %}
                                     <li><a href="#"> Hello, {{user.username}}</a></li>
-                                    <li><a href="{% url 'create' %}">Model Info</a></li>
+                                    <li><a href="{% url 'create' %}">Model Info <span class="oi oi-plus" /> </a></li>
                                     <li><a href="{% url 'modeldetail' %}">Model Details</a></li>
-                                    <li><a href="javascript:{document.getElementById('logout').submit()}">Logout</a></li>
+                                    <li><a href="javascript:{document.getElementById('logout').submit()}">Logout <span class="oi oi-account-logout" /></a></li>
                                     <form id="logout" method="POST" action="{% url 'logout' %}">
                                         {% csrf_token%}
                                         <input type="hidden" />
                                     </form>
                                     {% else %}
                                      <li><a href="{% url 'signup' %}">Sign Up</a></li>
-                                     <li><a href="{% url 'login' %}">Login</a></li>
+                                     <li><a href="{% url 'login' %}"> Login <span class="oi oi-account-login" /></a></li>
                                     {% endif %}
                                 </ul>
                             </nav>

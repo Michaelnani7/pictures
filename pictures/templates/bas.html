@@ -1,6 +1,6 @@
 <!doctype html>
-<html lang="en" class="h-100">
 {% load static %}
+<html lang="en" class="h-100">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -8,10 +8,10 @@
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v3.8.6">
     <title>www.wdhblogspot.com</title>
-
     <link rel="canonical" href="https://getbootstrap.com/docs/4.4/examples/sticky-footer-navbar/">
 
     <!-- Bootstrap core CSS -->
+      <link href="{% static 'open-iconic/font/css/open-iconic-bootstrap.css' %}" rel="stylesheet" >
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
           integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"
 
@@ -50,13 +50,13 @@
 <body class="d-flex flex-column h-100">
 <header >
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="/"><img class="img-fluid" src="{% static 'wdh.jpg' %} "width="100" height="100" alt=""></a>
+  <a class="nav-item nav-link active" href="/"><span class="oi oi-home"> Home</span></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav ml-auto">
-      <a class="nav-item nav-link active" href="/">Home</a>
+
 
     </div>
   </div>
