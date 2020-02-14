@@ -23,7 +23,7 @@ def signup(request):
 
                 auth.login(request,user)
 
-                return redirect('home')
+                return redirect('create')
 
         else:
 
@@ -41,7 +41,7 @@ def login(request):
                 user = auth.authenticate(username=request.POST['username'], password=request.POST['password'])
                 if user is not None:  # User not None means if User is A Genuie User
                         auth.login(request, user)
-                        return redirect('/')
+                        return redirect('create')
                 else:  # means a none Genuei User
                         return render(request, 'account/login.html',
                                       {'error': 'Username or Password not found ! , Try Signup'})
